@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1"><meta name="description" content="专业"><meta name="keywords" content="Android,移动开发,手机APP,javascript,html5,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek"><link rel="icon" href="/favicon.ico"><title>2O3T UIKIT</title><script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script><script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script><script src="https://cdn.bootcss.com/markdown-it/8.4.2/markdown-it.min.js"></script><script src="https://cdn.bootcss.com/clipboard-polyfill/3.0.0-beta3/clipboard-polyfill.promise.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script><link href="/css/chunk-23de6889.01c9eaf3.css" rel="prefetch"><link href="/js/chunk-23de6889.16eedc30.js" rel="prefetch"><link href="/css/app.86804091.css" rel="preload" as="style"><link href="/css/chunk-vendors.3ba1f9a8.css" rel="preload" as="style"><link href="/js/app.2b07b456.js" rel="preload" as="script"><link href="/js/chunk-vendors.e9eabded.js" rel="preload" as="script"><link href="/css/chunk-vendors.3ba1f9a8.css" rel="stylesheet"><link href="/css/app.86804091.css" rel="stylesheet"><style type="text/css">
+.v--modal-block-scroll {
+  overflow: hidden;
+  width: 100vw;
+}
+.v--modal-overlay {
+  position: fixed;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  opacity: 1;
+}
+.v--modal-overlay.scrollable {
+  height: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.v--modal-overlay .v--modal-background-click {
+  min-height: 100%;
+  width: 100%;
+}
+.v--modal-overlay .v--modal-box {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.v--modal-overlay.scrollable .v--modal-box {
+  margin-bottom: 2px;
+}
+.v--modal {
+  background-color: white;
+  text-align: left;
+  border-radius: 3px;
+  box-shadow: 0 20px 60px -2px rgba(27, 33, 58, 0.4);
+  padding: 0;
+}
+.v--modal.v--modal-fullscreen {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  left: 0;
+  top: 0;
+}
+.v--modal-top-right {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.overlay-fade-enter-active,
+.overlay-fade-leave-active {
+  transition: all 0.2s;
+}
+.overlay-fade-enter,
+.overlay-fade-leave-active {
+  opacity: 0;
+}
+.nice-modal-fade-enter-active,
+.nice-modal-fade-leave-active {
+  transition: all 0.4s;
+}
+.nice-modal-fade-enter,
+.nice-modal-fade-leave-active {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+</style><style type="text/css">
+.vue-modal-resizer {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 0;
+  bottom: 0;
+  z-index: 9999999;
+  background: transparent;
+  cursor: se-resize;
+}
+.vue-modal-resizer::after {
+  display: block;
+  position: absolute;
+  content: '';
+  background: transparent;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #ddd;
+  border-left: 10px solid transparent;
+}
+.vue-modal-resizer.clicked::after {
+  border-bottom: 10px solid #369be9;
+}
+</style><style type="text/css">
+.vue-dialog div {
+  box-sizing: border-box;
+}
+.vue-dialog .dialog-flex {
+  width: 100%;
+  height: 100%;
+}
+.vue-dialog .dialog-content {
+  flex: 1 0 auto;
+  width: 100%;
+  padding: 15px;
+  font-size: 14px;
+}
+.vue-dialog .dialog-c-title {
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+.vue-dialog .dialog-c-text {
+}
+.vue-dialog .vue-dialog-buttons {
+  display: flex;
+  flex: 0 1 auto;
+  width: 100%;
+  border-top: 1px solid #eee;
+}
+.vue-dialog .vue-dialog-buttons-none {
+  width: 100%;
+  padding-bottom: 15px;
+}
+.vue-dialog-button {
+  font-size: 12px !important;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+  line-height: 40px;
+  height: 40px;
+  color: inherit;
+  font: inherit;
+  outline: none;
+}
+.vue-dialog-button:hover {
+  background: rgba(0, 0, 0, 0.01);
+}
+.vue-dialog-button:active {
+  background: rgba(0, 0, 0, 0.025);
+}
+.vue-dialog-button:not(:first-of-type) {
+  border-left: 1px solid #eee;
+}
+</style><link rel="stylesheet" type="text/css" href="/css/chunk-23de6889.01c9eaf3.css"><script charset="utf-8" src="/js/chunk-23de6889.16eedc30.js"></script></head><body><noscript><strong>We're sorry but 2o3t.github.io doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><section ot="" class="ot-container index_root_FSSNJ App_root_2SJlR" id="app" theme="light" vertical="true"><header ot="" size="normal" class="ot-header OtHeader_root_1ZN_X App_header_3qzuo" theme="light" style="height: 6em; line-height: 6em;"><nav ot="" size="normal" class="ot-nav index_root_11FEU" ot-color="default" theme="light"><div class="index_left_2k64g"><a ot="" href="/" target="_self" class="ot-link index_root_15F3u" ot-color="default" ot-color-dark-font="true" ot-color-dark-font-hover="true" ot-color-dark-font-active="true" ot-color-dark-font-selected="true" ot-color-dark-font-disabled="true"><span ot="" size="normal" class="ot-logo index_root_3htlQ" ot-color="default" ot-color-dark-font="true" theme="light"><i ot="" size="normal" local-ratio="true" class="index_root_3dniJ index_icon_1OwAo font-ot font-ot-logo index_logo_1tXEE"></i><div class="index_title_3Hues"><span>2O3T</span></div><div class="index_subtitle_LQL7_"><span>UIKit</span></div></span></a></div><div ot="" placement="right" theme="light" class="ot-nav__content index_nav_3ffXv"></div><div class="index_right_yjAkV"><div class="ot-row App_right_3MxHp" style="margin-left: -5px; margin-right: -5px;"><div class="ot-col ot-col-6" style="padding-left: 5px; padding-right: 5px;"><div><span style="opacity: 0;">2O3T</span></div></div><div class="ot-col ot-col-6" style="padding-left: 5px; padding-right: 5px;"><div ot="" size="normal" round="" class="ot-tip ot-dropdown index_root_327aQ index_root_AOiBm"><a ot="" target="_self" class="ot-link index_root_15F3u index_link_qClf-" ot-color="default" ot-color-dark-font="true" ot-color-dark-font-selected="true" ot-color-dark-font-disabled="true"><span class="index_text_Egc48">THEME</span><div ot="" placement="down" border="" class="ot-arrow index_root_2ppg7"><div placement="down" class="index_box_VgqUW"><i ot="" animation="true" placement="down" border="true" class="index_arrow_23FxI" ot-color="default" ot-color-dark-border-left-selected="true" ot-color-dark-border-top-selected="true" ot-color-dark-border-left-disabled="true" ot-color-dark-border-top-disabled="true" ot-color-dark-border-left="true" ot-color-dark-border-top="true"></i></div></div></a></div></div><div class="ot-col ot-col-12" style="padding-left: 5px; padding-right: 5px; text-align: right;"><div ot="" size="normal" class="ot-corners index_root_2RiQV"><a ot="" href="//github.com/2o3t" target="_blank" title="View source on GitHub" class="ot-link index_root_15F3u index_githubCorner_3AQba" ot-color="default" ot-color-dark-font="true" ot-color-dark-font-hover="true" ot-color-dark-font-active="true" ot-color-dark-font-selected="true" ot-color-dark-font-disabled="true"><svg ot="" selected="selected" position="right" viewBox="0 0 250 250" aria-hidden="true" class="index_svg_37iLm" ot-color="default" ot-color-light-font-selected="true" ot-color-dark-background-selected="true" ot-color-fill="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" class="index_octo-arm_19SHK" style="transform-origin: 130px 106px 0px;"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a></div></div></div></div><!----></nav></header><main ot="" size="normal" class="ot-main OtMain_root_1gZmF App_main_2xcRE"><div class="index_root_3FFIC App_content_pIJBB" theme="light"><div class="index_banner_3FQyS"><div class="index_box_1W5Gi"><i ot="" size="20em" local-ratio="true" class="index_root_3dniJ index_icon_1OwAo font-ot font-ot-logo index_logo_24h1v" ot-color="default" ot-color-dark-font="true" style="font-size: 20em;"></i><p ot="" class="index_text_2mpRU" ot-color="default" ot-color-dark-font="true">2O3T-UIKIT</p><p ot="" disabled="disabled" ot-color="default" ot-color-dark-font-disabled="true">基于模块化的解决方案，服务于个人产品的设计体系，让开发者专注于更好的用户体验。</p><a ot="" href="//2o3t.github.io/2o3t-ui/" target="_self" class="ot-link index_root_15F3u index_btn_1iYgh" ot-color="default" ot-color-dark-font="true" ot-color-dark-font-hover="true" ot-color-dark-font-active="true" ot-color-dark-font-selected="true" ot-color-dark-font-disabled="true"><button ot="" size="big" type="button" circle="true" class="ot-button index_root_3x9It" ot-color="primary" ot-color-primary-font="true" ot-color-primary-background="true" ot-color-primary-border="true" ot-color-light-font-hover="true" ot-color-primary-background-hover="true" ot-color-primary-border-hover="true" ot-color-primary-background-active="true" ot-color-primary-border-active="true" ot-color-light-font-selected="true" ot-color-primary-background-selected="true" ot-color-primary-font-disabled="true" ot-color-primary-background-disabled="true" ot-color-primary-border-disabled="true" color="primary">GET STARTED</button></a><a ot="" href="//github.com/2o3t/2o3t-ui" target="_self" class="ot-link index_root_15F3u index_btn_1iYgh" ot-color="default" ot-color-dark-font="true" ot-color-dark-font-hover="true" ot-color-dark-font-active="true" ot-color-dark-font-selected="true" ot-color-dark-font-disabled="true"><button ot="" size="big" type="button" circle="true" class="ot-button index_root_3x9It" ot-color="default" ot-color-dark-font="true" ot-color-dark-background="true" ot-color-dark-border="true" ot-color-light-font-hover="true" ot-color-dark-background-hover="true" ot-color-dark-border-hover="true" ot-color-dark-background-active="true" ot-color-dark-border-active="true" ot-color-light-font-selected="true" ot-color-dark-background-selected="true" ot-color-dark-font-disabled="true" ot-color-dark-background-disabled="true" ot-color-dark-border-disabled="true"><span ot="" class="index_root_3dniJ"><i ot="" size="big" local-ratio="true" class="index_icon_1OwAo font-ot font-ot-github-fill"></i><span class="index_append_2178j">GITHUB</span></span></button></a></div></div><div class="index_content_2AEgn"><section class="Application_root_4ij04"><h1 ot="" class="Application_center_1Sgfs" ot-color="default" ot-color-dark-font-normal="true">UIKIT</h1><p ot="" disabled="disabled" class="Application_center_1Sgfs Application_desc_2Ukhe" ot-color="default" ot-color-dark-font="true" ot-color-dark-font-disabled="true">视觉UI组件库</p><div ot="" size="normal" class="ot-row-group index_root_3tgrg" ot-color="default"><div ot="" childs="" flex="true" class="ot-row-group__childs index_childs_2-OAO"><div ot="" size="normal" round="" shadow="true" class="ot-card index_root_2cD28 Application_card_2eiVd" ot-color="default" ot-color-dark-border-normal="true" style="height: 16em;"><!----><div class="index_right_3bLZV"><div class="ot-card__top index_top_2lH3V index_padding_1Gjr2"><a ot="" href="//2o3t.github.io/2o3t-ui" target="_blank" class="ot-link index_root_15F3u" ot-color="default" ot-color-dark-font="true" ot-color-dark-font-hover="true" ot-color-dark-font-active="true" ot-color-dark-font-selected="true" ot-color-dark-font-disabled="true"><h3 ot="" class="Application_title_2k8Ne" ot-color="default" ot-color-dark-font-normal="true">2o3t-ui</h3><div ot="" ot-color="default" ot-color-dark-font="true" ot-color-dark-font-disabled="true"></div></a></div><!----><div class="ot-card__bottom index_bottom_20npO index_padding_1Gjr2"><a ot="" href="//2o3t.github.io/2o3t-ui" target="_blank" class="ot-link index_root_15F3u Application_bottom_nFRj5 Application_desc_2Ukhe" ot-color="default" ot-color-dark-font="true" ot-color-dark-font-disabled="true" ot-color-dark-font-hover="true" ot-color-dark-font-active="true" ot-color-dark-font-selected="true"><span ot="" class="index_root_3dniJ"><i ot="" size="normal" local-ratio="true" class="index_icon_1OwAo font-ot font-ot-code"></i><span class="index_append_2178j"></span></span><span ot="" class="index_root_3dniJ Application_time_2zxOU"><i ot="" size="normal" local-ratio="true" class="index_icon_1OwAo font-ot font-ot-time-circle"></i><span class="index_append_2178j"></span></span></a></div></div></div><div ot="" size="normal" round="" shadow="true" class="ot-card index_root_2cD28 Application_card_2eiVd" ot-color="default" ot-color-dark-border-normal="true" style="height: 16em;"><!----><div class="index_right_3bLZV"><div class="ot-card__top index_top_2lH3V index_padding_1Gjr2"><a ot="" href="//2o3t.github.io/2o3t-IconFont" target="_blank" class="ot-link index_root_15F3u" ot-color="default" ot-color-dark-font="true" ot-color-dark-font-hover="true" ot-color-dark-font-active="true" ot-color-dark-font-selected="true" ot-color-dark-font-disabled="true"><h3 ot="" class="Application_title_2k8Ne" ot-color="default" ot-color-dark-font-normal="true">2o3t-IconFont</h3><div ot="" ot-color="default" ot-color-dark-font="true" ot-color-dark-font-disabled="true"></div></a></div><!----><div class="ot-card__bottom index_bottom_20npO index_padding_1Gjr2"><a ot="" href="//2o3t.github.io/2o3t-IconFont" target="_blank" class="ot-link index_root_15F3u Application_bottom_nFRj5 Application_desc_2Ukhe" ot-color="default" ot-color-dark-font="true" ot-color-dark-font-disabled="true" ot-color-dark-font-hover="true" ot-color-dark-font-active="true" ot-color-dark-font-selected="true"><span ot="" class="index_root_3dniJ"><i ot="" size="normal" local-ratio="true" class="index_icon_1OwAo font-ot font-ot-code"></i><span class="index_append_2178j"></span></span><span ot="" class="index_root_3dniJ Application_time_2zxOU"><i ot="" size="normal" local-ratio="true" class="index_icon_1OwAo font-ot font-ot-time-circle"></i><span class="index_append_2178j"></span></span></a></div></div></div><div ot="" size="normal" round="" shadow="true" class="ot-card index_root_2cD28 Application_card_2eiVd" ot-color="default" ot-color-dark-border-normal="true" style="height: 16em;"><!----><div class="index_right_3bLZV"><div class="ot-card__top index_top_2lH3V index_padding_1Gjr2"><a ot="" href="//2o3t.github.io/2o3t-GitMOJI" target="_blank" class="ot-link index_root_15F3u" ot-color="default" ot-color-dark-font="true" ot-color-dark-font-hover="true" ot-color-dark-font-active="true" ot-color-dark-font-selected="true" ot-color-dark-font-disabled="true"><h3 ot="" class="Application_title_2k8Ne" ot-color="default" ot-color-dark-font-normal="true">2o3t-GitMOJI</h3><div ot="" ot-color="default" ot-color-dark-font="true" ot-color-dark-font-disabled="true"></div></a></div><!----><div class="ot-card__bottom index_bottom_20npO index_padding_1Gjr2"><a ot="" href="//2o3t.github.io/2o3t-GitMOJI" target="_blank" class="ot-link index_root_15F3u Application_bottom_nFRj5 Application_desc_2Ukhe" ot-color="default" ot-color-dark-font="true" ot-color-dark-font-disabled="true" ot-color-dark-font-hover="true" ot-color-dark-font-active="true" ot-color-dark-font-selected="true"><span ot="" class="index_root_3dniJ"><i ot="" size="normal" local-ratio="true" class="index_icon_1OwAo font-ot font-ot-code"></i><span class="index_append_2178j"></span></span><span ot="" class="index_root_3dniJ Application_time_2zxOU"><i ot="" size="normal" local-ratio="true" class="index_icon_1OwAo font-ot font-ot-time-circle"></i><span class="index_append_2178j"></span></span></a></div></div></div></div><!----><!----></div><div class="Application_devide_1DHP4"></div><h1 ot="" class="Application_center_1Sgfs" ot-color="default" ot-color-dark-font-normal="true">OTHERS</h1><p ot="" disabled="disabled" class="Application_center_1Sgfs Application_desc_2Ukhe" ot-color="default" ot-color-dark-font="true" ot-color-dark-font-disabled="true">其他一些工具库</p><div ot="" size="normal" class="ot-row-group index_root_3tgrg" ot-color="default"><div ot="" childs="" flex="true" class="ot-row-group__childs index_childs_2-OAO"></div><!----><!----></div><div class="Application_devide_1DHP4"></div></section></div><footer ot="" theme="light" ot-color="default" ot-color-dark-font-normal="true" ot-color-dark-background-normal="true" class="Footer_root_2DA55"><div class="ot-row" theme="light" style="margin-left: -5px; margin-right: -5px;"><div class="ot-col ot-col-24 ot-col-sm-24 ot-col-md-12 ot-col-lg-12 ot-col-xl-12 Footer_left_cjGaF" style="padding-left: 5px; padding-right: 5px;"><div ot="" ot-color="default" ot-color-light-font-normal="true"><span ot="" class="index_root_3dniJ"><i ot="" size="normal" local-ratio="true" class="index_icon_1OwAo font-ot font-ot-logo"></i><span class="index_append_2178j">© 2018 2O3T.cn, Inc.</span></span></div></div><div class="ot-col ot-col-24 ot-col-sm-24 ot-col-md-12 ot-col-lg-12 ot-col-xl-12 Footer_right_WO08G" style="padding-left: 5px; padding-right: 5px;"><div ot="" ot-color="default" ot-color-light-font-normal="true">
+                Made with ❤ by 2O3T
+            </div></div></div></footer></div></main></section><script src="/js/chunk-vendors.e9eabded.js"></script><script src="/js/app.2b07b456.js"></script></body></html>
